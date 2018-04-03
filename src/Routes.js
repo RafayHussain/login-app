@@ -8,7 +8,6 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 import App from './App';
 
-
 const customHistory = createBrowserHistory();
 const CustomRoutes = () => (
   <Router history={customHistory}>
