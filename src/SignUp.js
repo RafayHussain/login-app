@@ -13,18 +13,8 @@ constructor(props){
       message: ''
     }
   };
-  // this.emailHandler = this.emailHandler.bind(this);
-  // this.passwordHandler = this.passwordHandler.bind(this);
-  // this.signUp = this.signUp.bind(this);
 }
 
-// emailHandler(event) {
-//    this.setState({email: event.target.value});
-// }
-
-// passwordHandler(event) {
-//   this.setState({password: event.target.value});
-// }
 
 signUp(){
   const {email, password} = this.state;
@@ -39,6 +29,7 @@ signUp(){
       this.props.history.push('/app');
     }else{
       console.log("user has signed out or still need to sign in.");
+      this.props.history.replace('/');
     }
   });
 }

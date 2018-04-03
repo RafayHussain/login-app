@@ -13,18 +13,7 @@ class SignIn extends Component{
         message: ''
       }
     };
-    // this.emailHandler = this.emailHandler.bind(this);
-    // this.passwordHandler = this.passwordHandler.bind(this);
-    // this.signIn = this.signIn.bind(this);
   }
-  
-  // emailHandler(event) {
-  //    this.setState({email: event.target.value});
-  // }
-  
-  // passwordHandler(event) {
-  //   this.setState({password: event.target.value});
-  // }
   
   signIn(){
     const {email, password} = this.state;
@@ -39,6 +28,7 @@ class SignIn extends Component{
         this.props.history.push('/app');
       }else{
         console.log("user has signed out or still need to sign in.");
+        this.props.history.replace('/');
       }
     });
   }  
